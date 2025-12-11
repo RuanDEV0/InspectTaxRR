@@ -14,4 +14,4 @@ class Command(BaseCommand):
         url = "https://api2.transparencia.rr.gov.br/transparencia/oauth/token?grant_type=client_credentials"
         response = requests.post(url, auth=(api_username, api_password))
         body = response.json()
-        print(body["access_token"])
+        return body["access_token"]
